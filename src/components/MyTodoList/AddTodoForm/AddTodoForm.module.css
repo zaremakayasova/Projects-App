@@ -1,0 +1,32 @@
+.AddTodoForm {
+    margin-bottom: 3%;
+}
+
+.AddTodoForm input {
+    width: 30%;
+    margin-right: 1%;
+    padding: 0.8%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid lightskyblue;
+    font-size: 16px;
+    background-color: #eee;
+}
+
+.AddTodoForm button {
+    font-family: "Roboto", sans-serif;
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
+    padding: 0.8%;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: none;
+    width: 7%;
+}
+
+.AddTodoForm button:hover {
+    background-color: #1184e8;
+transform: scaleX(1.1);    transform: scaleX(1.1);
+    cursor: pointer;
+}
