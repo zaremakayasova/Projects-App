@@ -9,17 +9,17 @@
     align-items: center;
 }
 
-.TodoListItem .TodoListLabel {
+.TodoListItem .TodoListText {
     width: 90%;
 }
 
-.TodoListItem .TodoListLabel input {
+.TodoListItem .TodoListText input {
     margin-right: 1%;
 }
 
 .TodoListBtn {
-    font-family: 'Roboto', sans-serif;
-    background-color: #DB4437;
+    font-family: "Roboto", sans-serif;
+    background-color: #db4437;
     color: white;
     font-size: 15px;
     letter-spacing: 1px;
@@ -30,13 +30,7 @@
 }
 
 .TodoListBtn:hover {
-    background-color: #FF0000;
+    background-color: #ff0000;
     cursor: pointer;
     transform: scaleX(1.1);
-}
-
-@media (max-width: 1200px) {
-    .TodoListItem {
-        flex-direction: column;
-    }
 }

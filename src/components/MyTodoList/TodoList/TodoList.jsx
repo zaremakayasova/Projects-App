@@ -1,22 +1,21 @@
 import classes from './TodoList.module.css';
+import { connect } from 'react-redux';
 import TodoListItem from '../TodoListItem/TodoListItem';
 
-const TodoList = () => {
+const TodoList = ({ todoList }) => {
     return (
-        <div>
-            <TodoListItem />
-            <TodoListItem />
-            {/* <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem />
-            <TodoListItem /> */}
+        <div className={classes.TodoList}>
+            {
+                todoList.map(todoItem => (
+                    <TodoListItem key={todoItem.id} text={todoItem.text} id={todoItem.id} />
+                ))
+            }
         </div>
     );
 }
 
-export default TodoList;
+const mapStateToProps = state => ({
+    todoList: state.todo.todoList
+});
+
+export default connect(mapStateToProps)(TodoList);
