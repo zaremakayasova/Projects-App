@@ -15,7 +15,7 @@ const AddTodoForm = ({ addNewTodo }) => {
     };
 
     const handleChange = e => {
-        setNewTodo({ id: 156, text: e.target.value });
+        setNewTodo({ id: Date.now(), text: e.target.value, completed: false });
     };
 
     return (

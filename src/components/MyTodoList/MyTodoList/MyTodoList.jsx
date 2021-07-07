@@ -1,7 +1,7 @@
 import classes from './MyTodoList.module.css';
 import AddTodoForm from '../AddTodoForm/AddTodoForm';
 import TodoList from '../TodoList/TodoList';
-import TotalItems from '../TotalItems/TotalItems';
+import TotalCompleteItems from '../TotalCompleteItems/TotalCompleteItems';
 
 const MyTodoList = () => {
     return (
@@ -10,7 +10,7 @@ const MyTodoList = () => {
                 <h1>My Todo List</h1>
                 <AddTodoForm />
                 <TodoList />
-                <TotalItems />
+                <TotalCompleteItems />
             </div>
         </div>
     );

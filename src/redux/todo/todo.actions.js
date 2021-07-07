@@ -10,6 +10,7 @@ export const deleteTodo = todoToDelete => ({
     payload: todoToDelete
 });
 
-export const checkTodo = () => ({
-    type: TodoActionTypes.CHECK_TODO
+export const toggleComplete = completedTodo => ({
+    type: TodoActionTypes.TOGGLE_COMPLETE,
+    payload: completedTodo
 });

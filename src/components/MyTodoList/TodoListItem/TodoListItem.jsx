@@ -1,19 +1,29 @@
 import classes from './TodoListItem.module.css';
+import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
-import { deleteTodo, checkTodo } from '../../../redux/todo/todo.actions';
+import { deleteTodo, toggleComplete } from '../../../redux/todo/todo.actions';
 
-const TodoListItem = ({ text, id, deleteTodo, checkTodo }) => {
-    const handleDelete = todoTodDelete => {
-        if (window.confirm('Are you sure you wish to delete this todo?')) deleteTodo(todoTodDelete);
+
+const TodoListItem = ({ text, id, completed, deleteTodo, toggleComplete }) => {
+
+    const dispatch = useDispatch();
+
+    const handleDelete = todoToDelete => {
+        if (window.confirm('Are you sure you wish to delete this todo?')) deleteTodo(todoToDelete);
     };
-    const handleChange = ({ text, id }) => {
-        checkTodo({ id, text });
+
+    const handleChange = () => {
+        toggleComplete({ id, text, completed: !completed })
     };
 
     return (
-        <div className={classes.TodoListItem}>
+        <div className={completed ? classes.CheckedInput : classes.TodoListItem}>
             <div className={classes.TodoListText}>
-                <input type='checkbox' id={id} onChange={handleChange} />
+                <input
+                    type='checkbox'
+                    id={id}
+                    checked={completed}
+                    onChange={handleChange} />
                 <label htmlFor={id}>{text}</label>
             </div>
             <button className={classes.TodoListBtn} onClick={() => handleDelete({ id, text })}>Delete</button>
@@ -21,9 +31,10 @@ const TodoListItem = ({ text, id, deleteTodo, checkTodo }) => {
     );
 };
 
+
 const mapDispatchToProps = dispatch => ({
-    deleteTodo: todoTodDelete => dispatch(deleteTodo(todoTodDelete)),
-    checkTodo: checkedTodo => dispatch(checkTodo(checkedTodo))
+    deleteTodo: todoToDelete => dispatch(deleteTodo(todoToDelete)),
+    toggleComplete: completedTodo => dispatch(toggleComplete(completedTodo))
 });
 
 export default connect(null, mapDispatchToProps)(TodoListItem);

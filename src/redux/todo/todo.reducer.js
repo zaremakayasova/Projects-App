@@ -4,20 +4,27 @@ const INITIAL_STATE = {
     todoList: [
         {
             id: 1,
-            text: 'todo 1'
+            text: 'todo 1',
+            completed: false
         },
         {
             id: 2,
-            text: 'todo 2'
+            text: 'todo 2',
+            completed: false
 
         },
         {
             id: 3,
-            text: 'todo 3'
-
+            text: 'todo 3',
+            completed: false
         }
-    ],
-    checked: false
+    ]
+};
+
+const updateCompleted = (state, completedTodo) => {
+    const index = state.findIndex(todo => todo.id === completedTodo.id);
+    state[index].completed = completedTodo.completed;
+    return state;
 };
 
 const todoReducer = (state = INITIAL_STATE, action) => {
@@ -32,10 +39,10 @@ const todoReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 todoList: state.todoList.filter(todoItem => todoItem.id !== action.payload.id)
             };
-        case TodoActionTypes.CHECK_TODO:
+        case TodoActionTypes.TOGGLE_COMPLETE:
             return {
                 ...state,
-                checked: !state.checked
+                todoList: updateCompleted(state.todoList, action.payload)
             };
         default:
             return state;

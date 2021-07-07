@@ -1,0 +1,9 @@
+.TotalItems {
+    margin-top: 7%;
+}
+
+@media (max-width: 1200px) {
+    .TotalItems {
+        margin-top: 15%;
+    }
+}

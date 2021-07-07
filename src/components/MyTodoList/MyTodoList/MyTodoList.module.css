@@ -16,7 +16,12 @@
 }
 
 @media (max-width: 1200px) {
-    .MyTodoList {
-        padding: 20% 0.5% 0.5% 0.5%;
+    .MyTodoList .MyTodoListContainer{
+        width: 90%;
+        padding: 5%;
+        height: 100vh;
+    }
+    .MyTodoList .MyTodoListContainer h1 {
+        margin-top: 25%;
     }
 }

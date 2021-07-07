@@ -9,11 +9,23 @@
     align-items: center;
 }
 
-.TodoListItem .TodoListText {
+.CheckedInput {
+    border: 1px solid lightskyblue;
+    background-color: lightgreen;
+    border-radius: 5px;
+    height: 50px;
+    margin: 1% 0 1% 0;
+    padding: 0.5% 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.TodoListText {
     width: 90%;
 }
 
-.TodoListItem .TodoListText input {
+.TodoListText input {
     margin-right: 1%;
 }
 
@@ -33,4 +45,28 @@
     background-color: #ff0000;
     cursor: pointer;
     transform: scaleX(1.1);
+}
+
+@media (max-width: 1200px) {
+    .TodoListItem {
+        height: 60px;
+        margin: 5% 0 5% 0;
+        font-size: 20px;
+    }
+    .CheckedInput {
+        height: 60px;
+        margin: 5% 0 5% 0;
+        font-size: 20px;
+    }
+    .TodoListText {
+        width: 75%;
+    }
+    .TodoListText input {
+        margin-right: 5%;
+    }
+    .TodoListBtn {
+        font-size: 15px;
+        height: 35px;
+        width: 20%;
+    }
 }
