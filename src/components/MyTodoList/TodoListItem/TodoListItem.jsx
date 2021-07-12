@@ -1,19 +1,22 @@
 import classes from './TodoListItem.module.css';
-import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
-import { deleteTodo, toggleComplete } from '../../../redux/todo/todo.actions';
+import { deleteTodo, editTodo, toggleComplete } from '../../../redux/todo/todo.actions';
+import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
 
 
-const TodoListItem = ({ text, id, completed, deleteTodo, toggleComplete }) => {
-
-    const dispatch = useDispatch();
+const TodoListItem = ({ todoItem, deleteTodo, editTodo, toggleComplete }) => {
+    const { id, text, completed } = todoItem;
 
     const handleDelete = todoToDelete => {
         if (window.confirm('Are you sure you wish to delete this todo?')) deleteTodo(todoToDelete);
     };
 
+    const handleEdit = todoToEdit => {
+        editTodo(todoToEdit);
+    };
+
     const handleChange = () => {
-        toggleComplete({ id, text, completed: !completed })
+        toggleComplete({ id, text, completed: !completed });
     };
 
     return (
@@ -26,15 +29,19 @@ const TodoListItem = ({ text, id, completed, deleteTodo, toggleComplete }) => {
                     onChange={handleChange} />
                 <label htmlFor={id}>{text}</label>
             </div>
-            <button className={classes.TodoListBtn} onClick={() => handleDelete({ id, text })}>Delete</button>
+            <div className={classes.TodoListItemButtons}>
+                <button className={classes.TodoListBtnEdit} onClick={() => handleEdit(todoItem)}>Edit <AiFillEdit /></button>
+                <button className={classes.TodoListBtnDelete} onClick={() => handleDelete(todoItem)}>Delete <AiFillDelete /></button>
+            </div>
         </div>
     );
 };
 
-
 const mapDispatchToProps = dispatch => ({
     deleteTodo: todoToDelete => dispatch(deleteTodo(todoToDelete)),
-    toggleComplete: completedTodo => dispatch(toggleComplete(completedTodo))
+    editTodo: todoToEdit => dispatch(editTodo(todoToEdit)),
+    toggleComplete: completedTodo => dispatch(toggleComplete(completedTodo)),
+
 });
 
 export default connect(null, mapDispatchToProps)(TodoListItem);

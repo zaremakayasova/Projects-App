@@ -22,14 +22,21 @@
 }
 
 .TodoListText {
-    width: 90%;
+    width: 70%;
 }
 
 .TodoListText input {
-    margin-right: 1%;
+    margin-right: 2%;
 }
 
-.TodoListBtn {
+.TodoListItemButtons {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TodoListBtnDelete {
     font-family: "Roboto", sans-serif;
     background-color: #db4437;
     color: white;
@@ -38,11 +45,30 @@
     border-radius: 4px;
     border: none;
     height: 35px;
-    width: 7%;
+    width: 35%;
 }
 
-.TodoListBtn:hover {
+.TodoListBtnEdit {
+    font-family: "Roboto", sans-serif;
+    background-color: #F48b00;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: none;
+    height: 35px;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.TodoListBtnDelete:hover {
     background-color: #ff0000;
+    cursor: pointer;
+    transform: scaleX(1.1);
+}
+
+.TodoListBtnEdit:hover {
+    background-color: #F4B400;
     cursor: pointer;
     transform: scaleX(1.1);
 }
@@ -59,14 +85,20 @@
         font-size: 20px;
     }
     .TodoListText {
-        width: 75%;
+        width: 50%;
     }
     .TodoListText input {
         margin-right: 5%;
     }
-    .TodoListBtn {
-        font-size: 15px;
-        height: 35px;
-        width: 20%;
+    .TodoListItemButtons {
+        width: 50%;
+    }
+    
+    .TodoListBtnDelete {
+        width: 50%;
+    }
+    
+    .TodoListBtnEdit {
+        width: 40%;
     }
 }

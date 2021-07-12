@@ -10,7 +10,16 @@ export const deleteTodo = todoToDelete => ({
     payload: todoToDelete
 });
 
+export const editTodo = todoToEdit => ({
+    type: TodoActionTypes.EDIT_TODO,
+    payload: todoToEdit
+});
+
 export const toggleComplete = completedTodo => ({
     type: TodoActionTypes.TOGGLE_COMPLETE,
     payload: completedTodo
+});
+
+export const hideAlertMsg = () => ({
+    type: TodoActionTypes.HIDE_ALERT_MSG
 });

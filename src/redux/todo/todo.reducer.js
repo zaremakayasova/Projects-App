@@ -18,13 +18,16 @@ const INITIAL_STATE = {
             text: 'todo 3',
             completed: false
         }
-    ]
+    ],
+    successMsg: '',
+    deleteMsg: ''
 };
 
 const updateCompleted = (state, completedTodo) => {
+    const newArray = state.slice();
     const index = state.findIndex(todo => todo.id === completedTodo.id);
-    state[index].completed = completedTodo.completed;
-    return state;
+    newArray.splice(index, 1, completedTodo);
+    return newArray;
 };
 
 const todoReducer = (state = INITIAL_STATE, action) => {
@@ -32,17 +35,30 @@ const todoReducer = (state = INITIAL_STATE, action) => {
         case TodoActionTypes.ADD_NEW_TODO:
             return {
                 ...state,
-                todoList: [...state.todoList, action.payload]
+                todoList: [...state.todoList, action.payload],
+                successMsg: 'A new todo has been added to your list!'
             };
         case TodoActionTypes.DELETE_TODO:
             return {
                 ...state,
-                todoList: state.todoList.filter(todoItem => todoItem.id !== action.payload.id)
+                todoList: state.todoList.filter(todoItem => todoItem.id !== action.payload.id),
+                deleteMsg: 'A todo has been deleted from your list!'
+            };
+        case TodoActionTypes.EDIT_TODO:
+            return {
+                ...state,
+                todoList: updateCompleted(state.todoList, action.payload)
             };
         case TodoActionTypes.TOGGLE_COMPLETE:
             return {
                 ...state,
                 todoList: updateCompleted(state.todoList, action.payload)
+            };
+        case TodoActionTypes.HIDE_ALERT_MSG:
+            return {
+                ...state,
+                successMsg: '',
+                deleteMsg: ''
             };
         default:
             return state;

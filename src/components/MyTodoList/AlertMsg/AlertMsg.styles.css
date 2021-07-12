@@ -1,0 +1,20 @@
+.AlertMsg {
+    width: 38%;
+    height: 18px;
+    padding: 15px;
+    background-color: lightgreen;
+    color: darkslategray;
+    margin: 4% 0 3% 0;
+}
+
+.DeleteAlert {
+    background-color: lightcoral;
+}
+
+@media (max-width: 1200px) {
+    .AlertMsg {
+        width: 88%;
+        height: 24px;
+        margin: 14% 0 3% 0;
+    }
+}
