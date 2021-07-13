@@ -1,14 +1,17 @@
 .MyTodoList {
     padding: 2%;
-    background-color: lightblue;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../image/city.jpg);
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
 }
 
-.MyTodoList .MyTodoListContainer{
+.MyTodoList .MyTodoListContainer {
     margin: 5% auto;
     padding: 2%;
     width: 60%;
     background-color: #eee;
+    border-radius: 5%;
     box-shadow: 0px 0px 5px 1px gray;
 }
 
@@ -17,10 +20,9 @@
 }
 
 @media (max-width: 1200px) {
-    .MyTodoList .MyTodoListContainer{
+    .MyTodoList .MyTodoListContainer {
         width: 90%;
         padding: 5%;
-        height: 100vh;
     }
     .MyTodoList .MyTodoListContainer h1 {
         margin-top: 25%;
