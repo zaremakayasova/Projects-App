@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.TodoListItem:hover {
+    background-color: lightgray;
+}
+
 .CheckedInput {
     border: 1px solid lightskyblue;
     background-color: lightgreen;
@@ -50,7 +54,7 @@
 
 .TodoListBtnEdit {
     font-family: "Roboto", sans-serif;
-    background-color: #F48b00;
+    background-color: #f48b00;
     color: white;
     font-size: 15px;
     letter-spacing: 1px;
@@ -64,13 +68,53 @@
 .TodoListBtnDelete:hover {
     background-color: #ff0000;
     cursor: pointer;
-    transform: scaleX(1.1);
 }
 
 .TodoListBtnEdit:hover {
-    background-color: #F4B400;
+    background-color: #f4b400;
     cursor: pointer;
-    transform: scaleX(1.1);
+}
+
+.TodoListEditPopup {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    background-color: lightblue;
+    width: 300px;
+    height: 120px;
+    padding: 1%;
+}
+
+.TodoListEditPopup input {
+    border: 1px solid #ededed;
+    width: 80%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 15px;
+    outline: none;
+}
+
+.TodoListEditForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TodoListEditPopup .TodoListEditForm button {
+    font-family: "Roboto", sans-serif;
+    background-color: #f48b00;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    width: 30%;
+}
+
+.TodoListEditPopup .TodoListEditForm button:hover {
+    cursor: pointer;
+    background-color: #f4b400;
 }
 
 @media (max-width: 1200px) {
@@ -93,12 +137,15 @@
     .TodoListItemButtons {
         width: 50%;
     }
-    
     .TodoListBtnDelete {
         width: 50%;
     }
-    
     .TodoListBtnEdit {
         width: 40%;
+    }
+    .TodoListEditPopup {
+        left: 8%;
+        top: 35%;
+        padding: 2%;
     }
 }

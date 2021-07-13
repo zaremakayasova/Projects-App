@@ -29,7 +29,7 @@ const AddTodoForm = ({ addNewTodo, successMsg, deleteMsg }) => {
                 deleteMsg ? <AlertMsg msg={deleteMsg} alertClass='AlertMsg' deleteAlert /> : null
             }
             <form className={classes.AddTodoForm} onSubmit={handleSubmit}>
-                <input type='text' placeholder='Add new todo...' onChange={handleChange} value={text} />
+                <input type='text' placeholder='Add new todo...' onChange={handleChange} value={text} required />
                 <button>Submit</button>
             </form>
         </div>

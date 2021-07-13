@@ -23,7 +23,7 @@ const INITIAL_STATE = {
     deleteMsg: ''
 };
 
-const updateCompleted = (state, completedTodo) => {
+const updateTodoList = (state, completedTodo) => {
     const newArray = state.slice();
     const index = state.findIndex(todo => todo.id === completedTodo.id);
     newArray.splice(index, 1, completedTodo);
@@ -47,12 +47,12 @@ const todoReducer = (state = INITIAL_STATE, action) => {
         case TodoActionTypes.EDIT_TODO:
             return {
                 ...state,
-                todoList: updateCompleted(state.todoList, action.payload)
+                todoList: updateTodoList(state.todoList, action.payload)
             };
         case TodoActionTypes.TOGGLE_COMPLETE:
             return {
                 ...state,
-                todoList: updateCompleted(state.todoList, action.payload)
+                todoList: updateTodoList(state.todoList, action.payload)
             };
         case TodoActionTypes.HIDE_ALERT_MSG:
             return {
