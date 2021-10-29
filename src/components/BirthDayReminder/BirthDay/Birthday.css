@@ -1,0 +1,45 @@
+body {
+    background-color: #f28ab2;
+}
+
+.birthday {
+    text-align: center;
+    margin: 5rem auto;
+    width: 70vw;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 0.6rem 2rem 2rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.birthday h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: rgb(94, 89, 89);
+}
+
+.birthday button {
+    background-color: #f28ab2;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 7px;
+    width: 98%;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.birthday button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 800px) {
+    .birthday {
+        width: 26vw;
+    }
+}

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Birthday.css";
 import data from "../data";
 import List from "../List/List";
 
 const BirthDayReminder = () => {
+  const [list, setList] = useState(data);
   return (
     <div className="birthday">
-      <h1>{data.length} birthdays today</h1>
-      {data.map((item) => (
+      <h1>{list.length} birthdays today</h1>
+      {list.map((item) => (
         <List {...item} />
       ))}
-      <button>Clear All</button>
+      <button onClick={() => setList([])}>Clear All</button>
     </div>
   );
 };

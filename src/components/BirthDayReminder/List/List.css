@@ -1,5 +1,6 @@
 .list {
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .list img {
@@ -8,3 +9,26 @@
     height: 75px;
     object-fit: cover;
 }
+
+.list h2 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.list .list-info {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list .list-info h2 {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.list .list-info p {
+    margin-top: 0;
+    color: rgb(150, 142, 142);
+    font-weight: 500;
+}
+
