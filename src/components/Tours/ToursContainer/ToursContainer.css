@@ -1,0 +1,13 @@
+.tours-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    min-height: 100vh;
+    background-color: #f1f5f8;
+}
+
+.tours-container h2{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: rgba(22, 22, 22, 0.89);
+}

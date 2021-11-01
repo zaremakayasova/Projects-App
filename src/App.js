@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage/Home/HomePage";
 import MyTodoList from "./components/MyTodoList/MyTodoList/MyTodoList";
 import BirthDayReminder from "./components/BirthDayReminder/BirthDay/BirthDay";
-import Tours from "./components/Tours/Tours/Tours";
+import ToursContainer from "./components/Tours/ToursContainer/ToursContainer";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
           <BirthDayReminder />
         </Route>
         <Route exact path="/tours">
-          <Tours />
+          <ToursContainer />
         </Route>
       </Router>
     </div>

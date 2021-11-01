@@ -1,6 +1,22 @@
-html {
-    background-color: whitesmoke;
-}
 .tours {
-    background-color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f5f8;
+    padding-top: 1.5rem;
 }
+
+.tours h2 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: rgba(22, 22, 22, 0.89);
+    margin-bottom: 0;
+}
+
+.tours hr {
+    width: 6%;
+    background-color:#2b9fd4;
+    border: 2px solid #2b9fd4;
+}
+

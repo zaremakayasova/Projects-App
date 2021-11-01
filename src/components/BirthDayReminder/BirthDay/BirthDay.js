@@ -7,13 +7,15 @@ import List from "../List/List";
 const BirthDayReminder = () => {
   const [list, setList] = useState(data);
   return (
-    <div className="birthday">
-      <img src={Baloons} />
-      <h1>{list.length} birthdays today</h1>
-      {list.map((item) => (
-        <List {...item} />
-      ))}
-      <button onClick={() => setList([])}>Clear All</button>
+    <div className="birthday-container">
+      <div className="birthday">
+        <img src={Baloons} />
+        <h1>{list.length} birthdays today</h1>
+        {list.map((item) => (
+          <List {...item} />
+        ))}
+        <button onClick={() => setList([])}>Clear All</button>
+      </div>
     </div>
   );
 };
