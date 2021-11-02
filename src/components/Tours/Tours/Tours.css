@@ -1,5 +1,5 @@
 .tours {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,15 +8,25 @@
 }
 
 .tours h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     color: rgba(22, 22, 22, 0.89);
     margin-bottom: 0;
 }
 
 .tours hr {
-    width: 6%;
-    background-color:#2b9fd4;
+    width: 20%;
+    background-color: #2b9fd4;
     border: 2px solid #2b9fd4;
+    margin-bottom: 1.5rem;
 }
 
+@media screen and (min-width: 800px) {
+    .tours h2 {
+        font-size: 2.5rem;
+    }
+
+    .tours hr {
+        width: 6%;
+    }
+}

@@ -1,13 +1,33 @@
 .tours-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding-top: 1.5rem;
     min-height: 100vh;
     background-color: #f1f5f8;
 }
 
-.tours-container h2{
-    font-size: 2.5rem;
+.tours-container h2 {
+    font-size: 2rem;
     text-transform: capitalize;
     color: rgba(22, 22, 22, 0.89);
+}
+
+.tours-container button {
+    border: none;
+    border-radius: 5px;
+    background-color: #2b9fd4;
+    color: white;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .tours-container h2 {
+        font-size: 2.5rem;
+    }
 }

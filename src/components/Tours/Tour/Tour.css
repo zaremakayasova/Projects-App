@@ -1,5 +1,5 @@
 .tour {
-    width: 38vw;
+    width: 90vw;
     margin-top: 2rem;
     margin-bottom: 1rem;
     background-color: white;
@@ -9,11 +9,11 @@
 }
 
 .tour:hover {
-    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .tour img {
-    width: 38vw;
+    width: 90vw;
     height: 20rem;
     object-fit: cover;
     border-top-right-radius: 7px;
@@ -27,15 +27,16 @@
 .tour-info h2 {
     display: inline;
     color: rgba(0, 0, 0, 0.795);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1rem;
+    font-weight: 800;
 }
 
 .tour-info span {
     background-color: rgb(227, 239, 243);
-    color: #21759B;
+    color: #21759b;
     letter-spacing: 0.1rem;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0.2rem 0.5rem;
     float: right;
 }
@@ -47,10 +48,10 @@
 }
 
 .tour-info .tour-read-more {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     border: none;
-    color: #21759B;
+    color: #21759b;
     background-color: transparent;
     cursor: pointer;
 }
@@ -59,7 +60,7 @@
     display: block;
     width: 200px;
     margin: 1rem auto 0 auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     border: 1px solid red;
     color: red;
     border-radius: 5px;
@@ -70,6 +71,17 @@
     cursor: pointer;
 }
 
-
-
-
+@media screen and (min-width: 800px) {
+    .tour {
+        width: 38vw;
+    }
+    .tour img {
+        width: 38vw;
+    }
+    .tour-info h2 {
+        font-size: 1.2rem;
+    }
+    .tour-info span {
+        font-weight: 700;
+    }
+}
