@@ -8,6 +8,7 @@ const HomePage = () => {
       <Link class='link' to="/mytodo-list">My Todo List</Link>
       <Link class='link' to="/birthday-reminder">Birthday Reminder</Link>
       <Link class='link' to="/tours">Tours</Link>
+      <Link class='link' to="/reviews">Reviews</Link>
     </div>
   );
 };

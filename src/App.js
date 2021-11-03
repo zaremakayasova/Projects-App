@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/Home/HomePage";
 import MyTodoList from "./components/MyTodoList/MyTodoList/MyTodoList";
 import BirthDayReminder from "./components/BirthDayReminder/BirthDay/BirthDay";
 import ToursContainer from "./components/Tours/ToursContainer/ToursContainer";
+import Reviews from "./components/Reviews/Reviews/Reviews";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
         </Route>
         <Route exact path="/tours">
           <ToursContainer />
+        </Route>
+        <Route exact path="/reviews">
+          <Reviews />
         </Route>
       </Router>
     </div>
