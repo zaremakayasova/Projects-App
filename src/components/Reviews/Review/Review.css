@@ -1,0 +1,73 @@
+.review {
+    width: 40vw;
+    background-color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-radius: 7px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+}
+
+.review:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review h2 {
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: rgba(22, 22, 22, 0.89);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.review h3 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #2b9fd4;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.review p {
+    color: rgb(109, 107, 107);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.review .review-switch {
+    border: none;
+    color: #2b9fd4;
+    background-color: transparent;
+    font-size: 1.7rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.review .review-switch:hover {
+    color: #1078a8;
+}
+
+.review .review-surprise {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    border-radius: 5px;
+    color: #2b9fd4;
+    background-color: transparent;
+    padding: 0.3rem 0.7rem;
+    margin-top: 1rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.review .review-surprise:hover {
+    background-color: #2b9fd4;
+    color: black;
+}

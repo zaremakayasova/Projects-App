@@ -1,0 +1,23 @@
+.reviews {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f5f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews h1 {
+    color: rgba(22, 22, 22, 0.89);
+    letter-spacing: 0.1rem;
+    font-size: 2.7rem;
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+
+.reviews hr {
+    width: 6%;
+    background-color: #2b9fd4;
+    border: 2px solid #2b9fd4;
+    margin-bottom: 3rem;
+}

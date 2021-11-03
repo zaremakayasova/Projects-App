@@ -38,12 +38,15 @@ const Reviews = () => {
   };
 
   return (
-    <div>
+    <div className='reviews'>
       <h1>Our Reviews</h1>
-      <Review {...review} />
-      <button onClick={() => showPrevious()}>Previous</button>
-      <button onClick={() => showNext()}>Next</button>
-      <button onClick={() => surpriseMe()}>Surprise Me</button>
+      <hr />
+      <Review
+        {...review}
+        showNext={showNext}
+        showPrevious={showPrevious}
+        surpriseMe={surpriseMe}
+      />
     </div>
   );
 };
