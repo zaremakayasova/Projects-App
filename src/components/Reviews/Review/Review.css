@@ -1,5 +1,5 @@
 .review {
-    width: 40vw;
+    width: 70vw;
     background-color: white;
     text-align: center;
     padding: 1.5rem 2rem;
@@ -12,11 +12,47 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.review .img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.review .img-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #2b9fd4;
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    border-radius: 50%;
+}
+
 .review img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    /* display: block; */
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    position: relative;
+}
+
+.review .quote-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: #2b9fd4;
+    color: white;
 }
 
 .review h2 {
@@ -70,4 +106,10 @@
 .review .review-surprise:hover {
     background-color: #2b9fd4;
     color: black;
+}
+
+@media screen and (min-width: 800px) {
+    .review {
+        width: 40vw;
+    }
 }
