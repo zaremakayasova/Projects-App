@@ -1,0 +1,25 @@
+.questions {
+    background-color: white;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.questions h2 {
+    display: inline;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.questions p {
+    color: rgb(109, 106, 106);
+    letter-spacing: 0.05rem;
+    font-size: 1rem;
+}
+
+.questions button {
+    float: right;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+.accordion-container {
+    background-color: darkseagreen;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.accordion {
+    background-color: beige;
+    width: 55vw;
+    padding: 1.5rem 2rem;
+    display: flex;
+    border-radius: 7px;
+}
+
+.accordion h1 {
+    width: 30%;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-right: 2rem;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.795);
+    letter-spacing: 0.1rem;
+}
+
+.accordion .accordion-questions {
+    width: 70%;
+}
