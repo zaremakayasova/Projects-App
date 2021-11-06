@@ -1,25 +1,54 @@
-.questions {
+.questions-container {
     background-color: white;
-    margin-bottom: 0.5rem;
-    padding: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(18, 116, 11, 0.2);
+}
+
+.questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .questions h2 {
-    display: inline;
-    font-size: 1rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.795);
 }
 
-.questions p {
+.questions-container p {
     color: rgb(109, 106, 106);
     letter-spacing: 0.05rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .questions button {
-    float: right;
     cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(175, 190, 175);
+    color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .questions-container {
+        margin-bottom: 0.5rem;
+    }
+    .questions-container p {
+        font-size: 1rem;
+    }
+    .questions button {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .questions h2 {
+        font-size: 1rem;
+    }
 }
