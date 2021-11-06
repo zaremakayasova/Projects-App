@@ -20,6 +20,9 @@ const HomePage = () => {
       <Link class="link" to="/accordion">
         Accordion
       </Link>
+      <Link class="link" to="/menu">
+        Menu
+      </Link>
     </div>
   );
 };

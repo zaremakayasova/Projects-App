@@ -6,6 +6,7 @@ import BirthDayReminder from "./components/BirthDayReminder/BirthDay/BirthDay";
 import ToursContainer from "./components/Tours/ToursContainer/ToursContainer";
 import Reviews from "./components/Reviews/Reviews/Reviews";
 import Accordion from "./components/Accordion/Accordion/Accordion";
+import MenuContainer from "./components/Menu/MenuContainer/MenuContainer";
 
 const App = () => {
   return (
@@ -28,6 +29,9 @@ const App = () => {
         </Route>
         <Route exact path="/accordion">
           <Accordion />
+        </Route>
+        <Route exact path="/menu">
+          <MenuContainer />
         </Route>
       </Router>
     </div>
