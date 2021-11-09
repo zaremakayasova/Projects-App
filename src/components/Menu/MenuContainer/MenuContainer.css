@@ -51,6 +51,14 @@ button:hover {
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+ 
+}
+
+@media screen and (min-width: 800px) {
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
