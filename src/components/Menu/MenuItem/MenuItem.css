@@ -1,12 +1,14 @@
 .menu-item {
     font-family: "Open Sans", sans-serif;
     display: flex;
-    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
     margin-bottom: 2rem;
 }
 
 .img-container {
-    width: 230px;
+    width: 90%;
     height: 150px;
     border-radius: 5px;
     border: 5px solid orange;
@@ -20,19 +22,18 @@
 }
 
 .menu-item-info {
-    padding: 0rem 2.5rem 0.5rem 1.5rem;
-    width: 50%;
+    padding: 1.2rem;
+    width: 95%;
 }
 
 .menu-item-info h2 {
     color: orange;
     text-transform: capitalize;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
 }
 
 .menu-item-info span {
-    float: right;
     color: #404042;
     font-weight: 600;
 }
@@ -48,4 +49,21 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px dashed #404042;
+}
+
+@media screen and (min-width: 800px) {
+    .menu-item {
+        width: 40vw;
+        flex-direction: row;
+    }
+    .img-container {
+        width: 230px;
+    }
+    .menu-item-info {
+        padding: 0rem 2.5rem 0.5rem 1.5rem;
+        width: 50%;
+    }
+    .menu-item-info h2 {
+        font-size: 1.2rem;
+    }
 }
