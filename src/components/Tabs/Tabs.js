@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Tabs.css";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const url = "https://course-api.com/react-tabs-project";
 
@@ -29,24 +30,34 @@ const Tabs = () => {
   const { title, dates, duties, company } = positions[number];
 
   return (
-    <div>
+    <div className="job">
       <h1>Experience</h1>
       <hr />
       <div>
         {positions.map((position, index) => (
-          <button key={position.id} onClick={() => setNumber(index)}>
+          <button
+            className={`${index === number ? "active-button" : "job-buttons"}`}
+            key={position.id}
+            onClick={() => setNumber(index)}
+          >
             {position.company}
           </button>
         ))}
       </div>
-      <div>
-        <h2>{title}</h2>
-        <span>{company}</span>
-        <span>{dates}</span>
+      <div className="job-info">
+        <h3>{title}</h3>
+        <span className="job-name">{company}</span>
+        <span className="job-dates">{dates}</span>
         {duties.map((duty, index) => (
-          <p key={index}>{duty}</p>
+          <div className="job-text">
+            <span className="job-text-icon">
+              <FaAngleDoubleRight />
+            </span>
+            <p key={index}>{duty}</p>
+          </div>
         ))}
       </div>
+      <button className="more-info-btn">More info</button>
     </div>
   );
 };

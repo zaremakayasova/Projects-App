@@ -1,0 +1,73 @@
+.job {
+    background-color: #f1f5f8;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job hr {
+    width: 25%;
+    background-color: #2b9fd4;
+    border: 2px solid #2b9fd4;
+}
+
+.job h1 {
+    color: rgba(0, 0, 0, 0.795);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0;
+}
+
+.job-info {
+    color: rgb(109, 107, 107);
+}
+
+.job-info p {
+    display: inline;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-left: 1.5rem;
+    color: black;
+}
+
+.job-info h3 {
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.795);
+    font-weight: 500;
+}
+
+.job-name {
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    background-color: rgb(211, 226, 231);
+    border-radius: 4px;
+}
+
+.job-dates {
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.job-text {
+    display: flex;
+    align-items: center;
+}
+
+.job-text-icon {
+    color: #2b9fd4;
+}
+
+.more-info-btn {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 2.5rem;
+    width: 60%;
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
