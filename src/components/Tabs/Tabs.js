@@ -30,32 +30,34 @@ const Tabs = () => {
   const { title, dates, duties, company } = positions[number];
 
   return (
-    <div className="job">
+    <div className="job-container">
       <h1>Experience</h1>
       <hr />
-      <div>
-        {positions.map((position, index) => (
-          <button
-            className={`${index === number ? "active-button" : "job-buttons"}`}
-            key={position.id}
-            onClick={() => setNumber(index)}
-          >
-            {position.company}
-          </button>
-        ))}
-      </div>
-      <div className="job-info">
-        <h3>{title}</h3>
-        <span className="job-name">{company}</span>
-        <span className="job-dates">{dates}</span>
-        {duties.map((duty, index) => (
-          <div className="job-text">
-            <span className="job-text-icon">
-              <FaAngleDoubleRight />
-            </span>
-            <p key={index}>{duty}</p>
-          </div>
-        ))}
+      <div className="job">
+        <div className="job-btns-container">
+          {positions.map((position, index) => (
+            <button
+              className={`${index === number ? "active-btn" : ""} job-btns`}
+              key={position.id}
+              onClick={() => setNumber(index)}
+            >
+              {position.company}
+            </button>
+          ))}
+        </div>
+        <div className="job-info">
+          <h3>{title}</h3>
+          <span className="job-name">{company}</span>
+          <span className="job-dates">{dates}</span>
+          {duties.map((duty, index) => (
+            <div className="job-text">
+              <span className="job-text-icon">
+                <FaAngleDoubleRight />
+              </span>
+              <p key={index}>{duty}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <button className="more-info-btn">More info</button>
     </div>

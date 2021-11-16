@@ -1,4 +1,4 @@
-.job {
+.job-container {
     background-color: #f1f5f8;
     font-family: "Open Sans", sans-serif;
     min-height: 100vh;
@@ -6,22 +6,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
-.job hr {
+.job-container hr {
     width: 25%;
     background-color: #2b9fd4;
     border: 2px solid #2b9fd4;
 }
 
-.job h1 {
+.job-container h1 {
     color: rgba(0, 0, 0, 0.795);
     letter-spacing: 0.1rem;
     margin-bottom: 0;
 }
 
-.job-info {
-    color: rgb(109, 107, 107);
+.job-btns-container {
+    margin: 4rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 8vh;
+    box-sizing: border-box;
+}
+
+.job-btns {
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.job-btns:hover {
+    color: #2b9fd4;
+    border-bottom: 3px solid #2b9fd4;
+}
+
+.active-btn {
+    color: #2b9fd4;
+    border-bottom: 3px solid #2b9fd4;
 }
 
 .job-info p {
@@ -66,8 +95,80 @@
 
 .more-info-btn {
     font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
     margin-top: 2.5rem;
     width: 60%;
-    padding: 0.3rem;
+    padding: 0.4rem;
     text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    background-color: #2b9fd4;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.more-info-btn:hover {
+    background-color: #76bada;
+    color: #08435f;
+}
+
+@media screen and (min-width: 800px) {
+    .job-container {
+        padding: unset;
+    }
+    .job-container h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-top: 4.5rem;
+    }
+    .job-container hr {
+        width: 6%;
+    }
+    .job {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .job-btns-container {
+        height: unset;
+        width: 15vw;
+        margin: unset;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .job-info {
+        width: 60%;
+        margin-left: 4rem;
+    }
+    .job-info p {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.692);
+    }
+    .job-name {
+        color: rgba(0, 0, 0, 0.692);
+    }
+    .job-info h3 {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.795);
+    }
+    .job-btns {
+        margin-bottom: 2rem;
+    }
+    .job-btns:hover {
+        border-bottom: unset;
+        border-left: 3px solid #2b9fd4;
+    }
+    .active-btn {
+        border-bottom: unset;
+        border-left: 3px solid #2b9fd4;
+    }
+    .more-info-btn {
+        width: 15%;
+        margin-top: 4rem;
+    }
 }
