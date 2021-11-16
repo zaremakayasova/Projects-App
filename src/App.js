@@ -7,6 +7,7 @@ import ToursContainer from "./components/Tours/ToursContainer/ToursContainer";
 import Reviews from "./components/Reviews/Reviews/Reviews";
 import Accordion from "./components/Accordion/Accordion/Accordion";
 import MenuContainer from "./components/Menu/MenuContainer/MenuContainer";
+import Tabs from "./components/Tabs/Tabs";
 
 const App = () => {
   return (
@@ -32,6 +33,9 @@ const App = () => {
         </Route>
         <Route exact path="/menu">
           <MenuContainer />
+        </Route>
+        <Route exact path="/tabs">
+          <Tabs />
         </Route>
       </Router>
     </div>

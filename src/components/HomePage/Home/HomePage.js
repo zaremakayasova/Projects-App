@@ -23,6 +23,9 @@ const HomePage = () => {
       <Link class="link" to="/menu">
         Menu
       </Link>
+      <Link class="link" to="/tabs">
+        Tabs
+      </Link>
     </div>
   );
 };
