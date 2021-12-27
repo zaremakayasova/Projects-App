@@ -8,6 +8,7 @@ import Reviews from "./components/Reviews/Reviews/Reviews";
 import Accordion from "./components/Accordion/Accordion/Accordion";
 import MenuContainer from "./components/Menu/MenuContainer/MenuContainer";
 import Tabs from "./components/Tabs/Tabs";
+import SliderItem from "./components/Slider/SliderItem/SliderItem";
 
 const App = () => {
   return (
@@ -36,6 +37,9 @@ const App = () => {
         </Route>
         <Route exact path="/tabs">
           <Tabs />
+        </Route>
+        <Route exact path="/slider">
+          <SliderItem />
         </Route>
       </Router>
     </div>
